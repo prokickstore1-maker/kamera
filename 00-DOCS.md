@@ -1,4 +1,4 @@
-# 00-DOCS.md - Peta Dokumen & Status Proyek vintaagemeew
+﻿# 00-DOCS.md - Peta Dokumen & Status Proyek vintagemeew
 
 **Status Proyek:** Fase Inisiasi (PRD Approved & Blueprint Ready)  
 **Tanggal Update Terakhir:** 2026-10-27  
@@ -11,7 +11,7 @@
 | :--- | :--- |
 | **[AGENTS.md](file:///d:/project%20web/kamera%20pung%20lallang/AGENTS.md)** | Aturan operasional wajib agen AI, Next.js rules, dan standar anti-slop. |
 | **[MVP.md](file:///d:/project%20web/kamera%20pung%20lallang/MVP.md)** | Master Blueprint acuan arsitektur e-commerce (ACID, Stepper, S3, Auto-Cancel, model data kamera). |
-| **[_build_plan/prd.md](file:///d:/project%20web/kamera%20pung%20lallang/_build_plan/prd.md)** | Product Requirement Document resmi spesifik untuk **vintaagemeew**. |
+| **[_build_plan/prd.md](file:///d:/project%20web/kamera%20pung%20lallang/_build_plan/prd.md)** | Product Requirement Document resmi spesifik untuk **vintagemeew**. |
 | **[DESIGN.md](file:///d:/project%20web/kamera%20pung%20lallang/DESIGN.md)** | Panduan visual, palet warna, tipografi, dan komponen Retro Y2K Pastel Digicam. |
 | **[DAILY_TASKS.md](file:///d:/project%20web/kamera%20pung%20lallang/DAILY_TASKS.md)** | Log harian pengerjaan tugas, hash commit, dan progres fitur per sesi. |
 | **[TASK.md](file:///d:/project%20web/kamera%20pung%20lallang/TASK.md)** | Checklist terstruktur perbaikan bug hasil audit, penyelarasan ambiguitas, dan Milestone 3. |

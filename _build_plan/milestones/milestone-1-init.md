@@ -1,4 +1,4 @@
-# Milestone 1: Inisialisasi Proyek, Design System & Skema Database
+﻿# Milestone 1: Inisialisasi Proyek, Design System & Skema Database
 
 **Tujuan:** Membangun fondasi Next.js 16 App Router (React 19 + Tailwind CSS v4), mengonfigurasi tema visual **Retro Y2K / Pastel Digicam**, menginstal komponen Shadcn UI, serta mengatur koneksi Drizzle ORM ke PostgreSQL.
 
@@ -7,7 +7,7 @@
 ## 📋 Daftar Tugas & Checklist Eksekusi
 
 ### 1. Inisialisasi Project Next.js
-- [x] Inisialisasi Next.js 16 di direktori aktif (`vintaagemeew`).
+- [x] Inisialisasi Next.js 16 di direktori aktif (`vintagemeew`).
 - [x] Konfigurasi `next.config.ts`:
   - Izinkan domain gambar remote (`minio.girlyglimpse.com`, `girlyglimpse.id`).
   - Aktifkan output standalone: `output: "standalone"`.

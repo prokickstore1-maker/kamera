@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProduct, listActiveTestimonials } from "@/lib/catalog";
@@ -12,14 +12,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   try {
     const p = await getProduct(slug);
-    if (!p || !p.active) return { title: "Kamera tidak ditemukan | vintaagemeew" };
+    if (!p || !p.active) return { title: "Kamera tidak ditemukan | vintagemeew" };
     return {
-      title: `${p.name} | vintaagemeew`,
+      title: `${p.name} | vintagemeew`,
       description: `${p.name} ${conditionLabel(p.conditionGrade) ?? ""} ${rupiah(p.priceIdr)}. ${p.description ?? ""}`.trim(),
       openGraph: { images: p.images[0]?.url ? [p.images[0].url] : [] },
     };
   } catch {
-    return { title: "vintaagemeew" };
+    return { title: "vintagemeew" };
   }
 }
 

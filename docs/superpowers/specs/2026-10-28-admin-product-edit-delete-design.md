@@ -1,4 +1,4 @@
-# Spesifikasi Desain: Fitur Edit & Hapus Kamera Admin Panel (vintaagemeew)
+﻿# Spesifikasi Desain: Fitur Edit & Hapus Kamera Admin Panel (vintagemeew)
 
 **Tanggal:** 2026-10-28  
 **Status:** Disetujui (Approved)  

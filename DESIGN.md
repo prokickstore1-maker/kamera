@@ -1,4 +1,4 @@
-# DESIGN.md - Panduan Visual & Estetika vintaagemeew
+﻿# DESIGN.md - Panduan Visual & Estetika vintagemeew
 
 **Style Archetype:** Retro Y2K / Aesthetic Pastel Digicam  
 **Mode Default:** Light Mode First (dengan dukungan Dark Mode)  

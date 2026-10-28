@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 import * as path from "path";
 import * as dotenv from "dotenv";
 import { db } from "./index";
@@ -101,7 +101,7 @@ interface RawPrice {
 }
 
 async function seed() {
-  console.log("🌸 Starting vintaagemeew database seed...");
+  console.log("🌸 Starting vintagemeew database seed...");
 
   const dataDir = path.join(process.cwd(), "data");
 
@@ -344,7 +344,7 @@ async function seed() {
       code: "QRIS_INSTANT",
       name: "QRIS Instan (GoPay, OVO, ShopeePay, BCA, Mandiri)",
       accountNumber: null,
-      accountHolder: "vintaagemeew Official",
+      accountHolder: "vintagemeew Official",
       qrImageUrl: "https://minio.girlyglimpse.com/static/sample-qris.png",
       instructions:
         "Scan QRIS dengan aplikasi m-Banking atau E-Wallet apa pun. Simpan bukti transfer untuk diunggah di halaman invoice.",
@@ -355,7 +355,7 @@ async function seed() {
       code: "BCA_TRANSFER",
       name: "Transfer Bank BCA",
       accountNumber: "8730291823",
-      accountHolder: "VINTAAGEMEEW KEDIRI",
+      accountHolder: "VINTAGEMEEW KEDIRI",
       qrImageUrl: null,
       instructions:
         "Transfer ke nomor rekening BCA di atas. Pastikan nominal transfer sesuai dengan total invoice.",
@@ -366,7 +366,7 @@ async function seed() {
       code: "MANDIRI_TRANSFER",
       name: "Transfer Bank Mandiri",
       accountNumber: "1230098765432",
-      accountHolder: "VINTAAGEMEEW KEDIRI",
+      accountHolder: "VINTAGEMEEW KEDIRI",
       qrImageUrl: null,
       instructions:
         "Transfer ke nomor rekening Bank Mandiri di atas. Upload slip transfer untuk verifikasi admin.",
@@ -382,8 +382,8 @@ async function seed() {
   // selaraskan data lama di DB (rekening masih "JKT")
   await db
     .update(paymentMethods)
-    .set({ accountHolder: "VINTAAGEMEEW KEDIRI" })
-    .where(eq(paymentMethods.accountHolder, "VINTAAGEMEEW JKT"));
+    .set({ accountHolder: "VINTAGEMEEW KEDIRI" })
+    .where(eq(paymentMethods.accountHolder, "VINTAGEMEEW JKT"));
 
   const [existingTesti] = await db.select({ id: testimonials.id }).from(testimonials).limit(1);
   if (!existingTesti) {
@@ -402,7 +402,7 @@ async function seed() {
   const defaultSettings = [
     {
       key: "store_name",
-      value: "vintaagemeew",
+      value: "vintagemeew",
       description: "Nama resmi toko",
     },
     {

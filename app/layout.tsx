@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ShopShell } from "@/components/shop-shell";
@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "vintaagemeew | Kurasi Kamera Digital Saku Vintage & Preloved",
+  title: "vintagemeew | Kurasi Kamera Digital Saku Vintage & Preloved",
   description:
     "Toko kurasi kamera digital saku vintage (digicam) preloved & brand new di Pare, Kediri. Setiap unit dites fungsi, catatan kondisi jujur, dan siap jepret.",
 };

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { uploadProof } from "@/lib/actions";
@@ -40,7 +40,7 @@ export function ProofUpload({
             <AlertDescription className="text-xs">
               {initialUploadedAt
                 ? `Diunggah pada ${initialUploadedAt}. Admin sedang memverifikasi pembayaran Anda.`
-                : "Admin vintaagemeew akan memverifikasi pembayaran Anda dan memperbarui status pesanan."}
+                : "Admin vintagemeew akan memverifikasi pembayaran Anda dan memperbarui status pesanan."}
             </AlertDescription>
           </Alert>
           <Button

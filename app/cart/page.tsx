@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { CartView } from "@/components/cart-view";
 
 export const dynamic = "force-dynamic";
 
-export const metadata: Metadata = { title: "Keranjang Belanja | vintaagemeew", robots: { index: false } };
+export const metadata: Metadata = { title: "Keranjang Belanja | vintagemeew", robots: { index: false } };
 
 export default function CartPage() {
   return (

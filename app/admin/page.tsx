@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { db } from "@/db";
@@ -19,7 +19,7 @@ import {
 import { Clock, Truck, AlertTriangle, DollarSign, LayoutDashboard } from "lucide-react";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Dashboard Admin | vintaagemeew", robots: { index: false } };
+export const metadata: Metadata = { title: "Dashboard Admin | vintagemeew", robots: { index: false } };
 
 export default async function AdminDashboard() {
   if (!(await isAdmin())) redirect("/admin/login");

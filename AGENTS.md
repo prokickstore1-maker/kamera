@@ -1,4 +1,4 @@
-<!-- BEGIN:nextjs-agent-rules -->
+﻿<!-- BEGIN:nextjs-agent-rules -->
 
 ## This is NOT the Next.js you know
 
@@ -8,15 +8,15 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-# AGENTS.md - Panduan Operasional & Aturan Kerja Agen (vintaagemeew)
+# AGENTS.md - Panduan Operasional & Aturan Kerja Agen (vintagemeew)
 
-Dokumen ini adalah pedoman kerja wajib untuk setiap AI Agent yang beroperasi di dalam repository **vintaagemeew**.
+Dokumen ini adalah pedoman kerja wajib untuk setiap AI Agent yang beroperasi di dalam repository **vintagemeew**.
 
 ---
 
 ## 📌 Ringkasan Identitas Proyek
 
-- **Nama Proyek**: **vintaagemeew**
+- **Nama Proyek**: **vintagemeew**
 - **Domain Produk**: E-Commerce Kurasi Kamera Digital Vintage & Preloved (Digicam).
 - **Aesthetic Direction**: **Retro Y2K / Aesthetic Pastel Digicam** (Light Mode First).
 - **Tech Stack**: Next.js **16.4** (App Router, Turbopack default, React **19.3**) + Tailwind CSS **v4** + Shadcn UI + Drizzle ORM (PostgreSQL) + S3/MinIO Object Storage + Coolify Deployment.

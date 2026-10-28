@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import * as React from "react";
 import Link from "next/link";
@@ -115,7 +115,7 @@ export function CategoriesManager({ initialCategories }: { initialCategories: Ca
               <span>Tambah Kategori Baru</span>
             </CardTitle>
             <CardDescription className="text-xs">
-              Tambahkan jenis kamera baru ke dalam sistem vintaagemeew.
+              Tambahkan jenis kamera baru ke dalam sistem vintagemeew.
             </CardDescription>
           </CardHeader>
           <CardContent>

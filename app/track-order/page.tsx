@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { db } from "@/db";
 import { orders } from "@/db/schema";
@@ -15,7 +15,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PackageSearch, AlertCircle, ArrowLeft, ExternalLink } from "lucide-react";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Lacak Pesanan | vintaagemeew", robots: { index: false } };
+export const metadata: Metadata = { title: "Lacak Pesanan | vintagemeew", robots: { index: false } };
 
 const STATUS_STEP: Record<string, number> = {
   PENDING_PAYMENT: 1,

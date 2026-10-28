@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useActionState, useState } from "react";
 import { loginAction } from "@/lib/admin-actions";
@@ -21,7 +21,7 @@ export function LoginForm() {
         </div>
         <CardTitle className="text-xl font-extrabold tracking-tight">Login Admin</CardTitle>
         <CardDescription className="text-xs">
-          Panel kontrol internal vintaagemeew
+          Panel kontrol internal vintagemeew
         </CardDescription>
       </CardHeader>
 

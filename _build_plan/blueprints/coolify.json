@@ -1,6 +1,6 @@
 {
-  "name": "vintaagemeew",
-  "description": "Production Coolify deployment specification for vintaagemeew",
+  "name": "vintagemeew",
+  "description": "Production Coolify deployment specification for vintagemeew",
   "build_pack": "dockerfile",
   "dockerfile_location": "/Dockerfile",
   "ports_exposes": "3000",
@@ -11,12 +11,12 @@
     },
     {
       "key": "DATABASE_URL",
-      "value": "postgresql://postgres:password@postgres:5432/vintaagemeew_db",
+      "value": "postgresql://postgres:password@postgres:5432/vintagemeew_db",
       "is_build_time": false
     },
     {
       "key": "NEXT_PUBLIC_SITE_URL",
-      "value": "https://vintaagemeew.com",
+      "value": "https://vintagemeew.com",
       "is_build_time": true
     },
     {
@@ -61,12 +61,12 @@
     },
     {
       "key": "S3_BUCKET_PUBLIC",
-      "value": "vintaagemeew-public",
+      "value": "vintagemeew-public",
       "is_build_time": false
     },
     {
       "key": "S3_BUCKET_PRIVATE",
-      "value": "vintaagemeew-proofs",
+      "value": "vintagemeew-proofs",
       "is_build_time": false
     }
   ],

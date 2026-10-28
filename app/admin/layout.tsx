@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { isAdmin } from "@/lib/admin-session";
 import { AdminDesktopSidebar, AdminMobileHeader } from "@/components/admin-nav";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Admin | vintaagemeew", robots: { index: false } };
+export const metadata: Metadata = { title: "Admin | vintagemeew", robots: { index: false } };
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const authed = await isAdmin();

@@ -1,4 +1,4 @@
-# HANDOFF.md - Status Estafet Sesi & Guardrails
+﻿# HANDOFF.md - Status Estafet Sesi & Guardrails
 
 Dokumen ini memuat status serah terima antar sesi pengerjaan AI agent serta batasan (*guardrails*) bagian yang dilarang diutak-atik.
 
@@ -11,7 +11,7 @@ Dokumen ini memuat status serah terima antar sesi pengerjaan AI agent serta bata
   - Proyek Next.js 16.4.3 (App Router + React 19.3 + Turbopack + Tailwind v4) aktif di root workspace.
   - Skema Drizzle (`db/schema.ts`) sudah sinkron dengan DB fisik via `drizzle-kit push`.
   - Database lokal: **Embedded PostgreSQL** aktif di port `5432` (`npm run db:start`) di `./.pgdata` (UTF-8 locale C).
-  - Data seeding: 32 produk kamera, 94 gambar, 8 kategori standar industri, 12 brands, tags, testimonials, payment methods (`VINTAAGEMEEW KEDIRI`), dan settings telah masuk ke database.
+  - Data seeding: 32 produk kamera, 94 gambar, 8 kategori standar industri, 12 brands, tags, testimonials, payment methods (`VINTAGEMEEW KEDIRI`), dan settings telah masuk ke database.
   - **Hardening Backend, Keamanan & Milestone 3 ([TASK.md](file:///d:/project%20web/kamera%20pung%20lallang/TASK.md)) Selesai**:
     - Alias variabel env S3 & ekstraksi key objek deterministik (`lib/s3.ts`).
     - Autentikasi admin pada `proofUrl()`, validasi klaim `role === "admin"` & penolakan fallback secret di production (`lib/admin-session.ts`).

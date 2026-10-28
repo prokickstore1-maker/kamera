@@ -1,12 +1,12 @@
-import * as fs from "node:fs";
+﻿import * as fs from "node:fs";
 import * as path from "node:path";
 import EmbeddedPostgres from "embedded-postgres";
 
 const databaseDir = path.join(process.cwd(), ".pgdata");
-const dbName = "vintaagemeew_db";
+const dbName = "vintagemeew_db";
 
 async function main() {
-  console.log("🐘 Starting Embedded PostgreSQL for vintaagemeew...");
+  console.log("🐘 Starting Embedded PostgreSQL for vintagemeew...");
 
   const pg = new EmbeddedPostgres({
     databaseDir,

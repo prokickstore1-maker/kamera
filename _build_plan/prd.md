@@ -1,8 +1,8 @@
-# Product Requirement Document (PRD): vintaagemeew
+﻿# Product Requirement Document (PRD): vintagemeew
 ## Platform E-Commerce Kurasi Kamera Digital & Vintage (Retro Y2K Aesthetic)
 
 **Versi Dokumen:** 2.0.0  
-**Nama Brand:** vintaagemeew  
+**Nama Brand:** vintagemeew  
 **Status:** Approved & Aligned with [MVP.md](file:///d:/project%20web/kamera%20pung%20lallang/MVP.md)  
 **Target Pasar:** Pecinta kamera saku vintage, digicam nostalgia era 2000-an, content creator, dan kolektor.  
 **Tech Stack:** Next.js (App Router) + Shadcn UI + Tailwind CSS + Drizzle ORM (PostgreSQL) + Object Storage (S3/MinIO) + Coolify.
@@ -11,7 +11,7 @@
 
 ## 1. Visi Produk & Ringkasan Eksekutif
 
-**vintaagemeew** adalah platform e-commerce kurasi kamera digital preloved dan brand new dengan identitas visual **Retro Y2K / Aesthetic Pastel Digicam**. Platform ini menggabungkan pengalaman belanja yang estetik, transparan, dan interaktif dengan keandalan transaksi perbankan lokal (QRIS & Transfer Bank), sistem validasi stok mutlak (*zero race condition*), serta notifikasi admin instan via Telegram Bot.
+**vintagemeew** adalah platform e-commerce kurasi kamera digital preloved dan brand new dengan identitas visual **Retro Y2K / Aesthetic Pastel Digicam**. Platform ini menggabungkan pengalaman belanja yang estetik, transparan, dan interaktif dengan keandalan transaksi perbankan lokal (QRIS & Transfer Bank), sistem validasi stok mutlak (*zero race condition*), serta notifikasi admin instan via Telegram Bot.
 
 ### Nilai Utama (Key Value Propositions):
 1. **Transparansi Kondisi Fisik 100%**: Setiap kamera memiliki skor kondisi bodi terstruktur (`condition_grade` 1–10), catatan minus/defects jujur, daftar kelengkapan aksesoris (*inclusions*), dan galeri foto multi-sudut resolusi tinggi yang mencakup foto bodi dan sample shots hasil jepretan.

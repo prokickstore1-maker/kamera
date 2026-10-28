@@ -1,4 +1,4 @@
-# TASK_UI_UX.md - Daftar Tugas Khusus UI, UX, Styling & Anti-Slop
+﻿# TASK_UI_UX.md - Daftar Tugas Khusus UI, UX, Styling & Anti-Slop
 
 **Tanggal Audit & Eksekusi:** 2026-10-28  
 **Referensi Standar:** `DESIGN.md`, `_build_plan/blueprints/theme-config.css`, `.claude/skills/antislop/SKILL.md`, `.claude/skills/antislop-ui/SKILL.md`, `.claude/skills/antislop-layoutmobile/SKILL.md`, `.claude/skills/antislop-copywriting/SKILL.md`
@@ -25,7 +25,7 @@
 - [x] **UX-06 — Aksesibilitas & Prioritas Gambar Galeri** (`components/product-gallery.tsx`):
   - Menggunakan `aria-current={i === active ? "true" : undefined}`, menambahkan `alt` deskriptif pada thumbnail, dan `fetchPriority="high"` pada gambar utama.
 - [x] **UX-07 — Halaman 404 Kustom (`app/not-found.tsx`)**:
-  - Menyediakan halaman `not-found.tsx` bergaya vintaagemeew dengan navigasi kembali ke katalog dan beranda.
+  - Menyediakan halaman `not-found.tsx` bergaya vintagemeew dengan navigasi kembali ke katalog dan beranda.
 
 ### 1.3. Keranjang, Add-to-Cart & Checkout
 - [x] **UX-08 — Batas Maksimal Stok pada Stepper Keranjang** (`components/cart-view.tsx`):

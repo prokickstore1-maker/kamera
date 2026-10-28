@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Camera } from "lucide-react";
 
-export const metadata: Metadata = { title: "Panduan Spesifikasi Digicam | vintaagemeew" };
+export const metadata: Metadata = { title: "Panduan Spesifikasi Digicam | vintagemeew" };
 
 const TERMS = [
   [

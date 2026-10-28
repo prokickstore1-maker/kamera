@@ -1,6 +1,6 @@
-# vintaagemeew - Digicam Store Scraper & Dataset
+﻿# vintagemeew - Digicam Store Scraper & Dataset
 
-Data hasil scraping lengkap dari [Girly Glimpse](https://girlyglimpse.com/) untuk katalog dan fondasi produk e-commerce **vintaagemeew** (Toko kamera digital/digicam preloved & brand new Pare, Kediri).
+Data hasil scraping lengkap dari [Girly Glimpse](https://girlyglimpse.com/) untuk katalog dan fondasi produk e-commerce **vintagemeew** (Toko kamera digital/digicam preloved & brand new Pare, Kediri).
 
 ## 📊 Ringkasan Data (Dataset Summary)
 

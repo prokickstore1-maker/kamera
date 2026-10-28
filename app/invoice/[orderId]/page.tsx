@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { db } from "@/db";
@@ -16,7 +16,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Clock, MessageCircle, PackageSearch, ShieldCheck, Truck, Download, CheckCircle2 } from "lucide-react";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Invoice Pesanan | vintaagemeew", robots: { index: false } };
+export const metadata: Metadata = { title: "Invoice Pesanan | vintagemeew", robots: { index: false } };
 
 function maskName(n: string): string {
   const parts = n.trim().split(/\s+/);
@@ -62,7 +62,7 @@ export default async function InvoicePage({ params }: { params: Promise<{ orderI
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div>
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-muted-foreground block mb-0.5">
-                Invoice Resmi vintaagemeew
+                Invoice Resmi vintagemeew
               </span>
               <CardTitle className="text-xl sm:text-2xl font-extrabold font-mono text-foreground">
                 {order.orderNumber}
@@ -102,7 +102,7 @@ export default async function InvoicePage({ params }: { params: Promise<{ orderI
               <AlertDescription className="text-xs">
                 Bukti pembayaran telah diterima pada {formatDate(order.proofUploadedAt)}
                 {order.status === "PENDING_PAYMENT"
-                  ? ". Admin vintaagemeew sedang memverifikasi dan akan memperbarui status pesanan."
+                  ? ". Admin vintagemeew sedang memverifikasi dan akan memperbarui status pesanan."
                   : "."}
               </AlertDescription>
             </Alert>
@@ -213,7 +213,7 @@ export default async function InvoicePage({ params }: { params: Promise<{ orderI
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={snap.qrImageUrl}
-                    alt="Kode QRIS vintaagemeew"
+                    alt="Kode QRIS vintagemeew"
                     className="h-44 w-44 rounded-xl border border-border bg-card p-2 object-contain shadow-xs"
                   />
                   <a
@@ -246,7 +246,7 @@ export default async function InvoicePage({ params }: { params: Promise<{ orderI
           <div className="flex flex-wrap gap-2.5 pt-2">
             <Button asChild size="default" className="rounded-full shadow-xs">
               <a
-                href={waLink(wa, `Halo vintaagemeew, saya ingin menanyakan status pesanan nomor ${order.orderNumber}`)}
+                href={waLink(wa, `Halo vintagemeew, saya ingin menanyakan status pesanan nomor ${order.orderNumber}`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"

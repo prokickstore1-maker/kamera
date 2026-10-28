@@ -1,4 +1,4 @@
-"use server";
+﻿"use server";
 
 import { redirect } from "next/navigation";
 import bcrypt from "bcryptjs";
@@ -395,7 +395,7 @@ export async function uploadProductImageAction(formData: FormData): Promise<{ ok
     const filename = `product-${Date.now()}-${Math.random().toString(36).slice(2, 7)}.${ext}`;
 
     const endpoint = process.env.S3_ENDPOINT;
-    const bucket = s3Env("S3_BUCKET_PUBLIC") || "vintaagemeew-public";
+    const bucket = s3Env("S3_BUCKET_PUBLIC") || "vintagemeew-public";
 
     if (endpoint && s3Env("S3_ACCESS_KEY_ID")) {
       try {
@@ -598,7 +598,7 @@ export async function uploadTestimonialImageAction(
     const filename = `testi-${Date.now()}-${Math.random().toString(36).slice(2, 7)}.${ext}`;
 
     const endpoint = process.env.S3_ENDPOINT;
-    const bucket = s3Env("S3_BUCKET_PUBLIC") || "vintaagemeew-public";
+    const bucket = s3Env("S3_BUCKET_PUBLIC") || "vintagemeew-public";
 
     if (endpoint && s3Env("S3_ACCESS_KEY_ID")) {
       try {
@@ -662,7 +662,7 @@ export async function createTestimonialAction(input: {
     await db.insert(testimonials).values({
       customerName,
       rating,
-      content: content || "Puas belanja di vintaagemeew!",
+      content: content || "Puas belanja di vintagemeew!",
       screenshotUrl,
       isActive: true,
       sortOrder: 0,
@@ -882,7 +882,7 @@ export async function uploadBannerImageAction(
     const filename = `banner-${Date.now()}-${Math.random().toString(36).slice(2, 7)}.${ext}`;
 
     const endpoint = process.env.S3_ENDPOINT;
-    const bucket = s3Env("S3_BUCKET_PUBLIC") || "vintaagemeew-public";
+    const bucket = s3Env("S3_BUCKET_PUBLIC") || "vintagemeew-public";
 
     if (endpoint && s3Env("S3_ACCESS_KEY_ID")) {
       try {

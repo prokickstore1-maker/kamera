@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import * as React from "react";
 import Link from "next/link";
@@ -87,7 +87,7 @@ export function AdminDesktopSidebar() {
         </div>
         <div className="min-w-0">
           <p className="font-extrabold text-sm text-foreground tracking-tight truncate">
-            vintaagemeew
+            vintagemeew
           </p>
           <div className="flex items-center gap-1.5 mt-0.5">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
@@ -164,7 +164,7 @@ export function AdminMobileHeader() {
                 </div>
                 <div>
                   <SheetTitle className="text-sm font-extrabold text-foreground tracking-tight">
-                    vintaagemeew
+                    vintagemeew
                   </SheetTitle>
                   <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
                     Panel Admin
@@ -215,7 +215,7 @@ export function AdminMobileHeader() {
         </Sheet>
 
         <Link href="/admin" className="font-extrabold text-sm tracking-tight text-foreground flex items-center gap-1.5">
-          <span>vintaagemeew</span>
+          <span>vintagemeew</span>
           <Badge variant="secondary" className="text-[9px] px-1.5 py-0 font-bold uppercase">
             Admin
           </Badge>

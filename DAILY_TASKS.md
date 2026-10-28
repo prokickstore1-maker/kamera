@@ -1,4 +1,4 @@
-# DAILY_TASKS.md - Log Pengerjaan Harian vintaagemeew
+﻿# DAILY_TASKS.md - Log Pengerjaan Harian vintagemeew
 
 Dokumen ini diperbarui secara otomatis di akhir setiap sesi pengerjaan.
 
@@ -69,7 +69,7 @@ Dokumen ini diperbarui secara otomatis di akhir setiap sesi pengerjaan.
   - [x] Menambahkan Server Actions `createCategoryAction` dan `deleteCategoryAction` di `lib/admin-actions.ts`.
   - [x] Menambahkan menu navigasi resmi `Kelola Kategori` (`FolderTree`) di `components/admin-nav.tsx`.
 - [x] **Perbaikan Total Tabrakan Logo & Menu Header Desktop**:
-  - [x] Menghilangkan bug `absolute left-1/2 -translate-x-1/2` pada logo yang menyebabkan teks merek `VINTAAGEMEEW` menabrak tautan navigasi `FUJIFILM`, `OLYMPUS`, dan `+ MORE BRANDS` di layar desktop.
+  - [x] Menghilangkan bug `absolute left-1/2 -translate-x-1/2` pada logo yang menyebabkan teks merek `VINTAGEMEEW` menabrak tautan navigasi `FUJIFILM`, `OLYMPUS`, dan `+ MORE BRANDS` di layar desktop.
   - [x] Menerapkan tata letak natural flex editorial (Logo di kiri, tautan brand & kategori di tengah, aksi pencarian/login/keranjang di kanan pada desktop; logo tetap simetris di tengah pada mobile).
 - [x] Verifikasi Mutu Teknis:
   - [x] `npx tsc --noEmit`: EXIT=0 untuk seluruh komponen/halaman UI (`app/**` & `components/**`).
@@ -102,7 +102,7 @@ Dokumen ini diperbarui secara otomatis di akhir setiap sesi pengerjaan.
   - [ ] Pasang `<OrderActions>` di `/admin/orders/[id]` dan tombol aksi (`Most Wanted`, `Unggulan`, `Hapus`) di `/admin/products`.
   - [ ] Perbaiki rollback `StockStepper` ke nilai sebelum mutasi & sinkronkan label kondisi di `ProductForm`.
 - [ ] **Fase 3 — Penyelarasan Seeder & Ambiguitas Dokumen**:
-  - [ ] Tambahkan 8 merek populer & data awal `testimonials` ke `db/seed.ts`, serta ubah nama rekening `VINTAAGEMEEW JKT` ke Kediri.
+  - [ ] Tambahkan 8 merek populer & data awal `testimonials` ke `db/seed.ts`, serta ubah nama rekening `VINTAGEMEEW JKT` ke Kediri.
   - [ ] Selaraskan aturan tag `"Brand New"`, dokumentasi kategori, status `AUDIT.md`, `HANDOFF.md`, dan `theme-config.css`.
 - [ ] **Fase 4 — Milestone 3 (Hardening, SEO & Coolify)**:
   - [ ] Buat `app/sitemap.ts`, `app/robots.ts`, `app/api/health/route.ts`, HTTP Security Headers di `next.config.ts`, serta `Dockerfile` & `.dockerignore`.
@@ -114,7 +114,7 @@ Dokumen ini diperbarui secara otomatis di akhir setiap sesi pengerjaan.
 ### 🎯 Target Sesi Ini:
 - [x] Scrape seluruh data katalog, kategori, brand, tag, ongkos kirim, dan 94 foto kamera resolusi tinggi dari Girly Glimpse.
 - [x] Susun PRD lengkap `_build_plan/prd.md` yang selaras 100% dengan acuan `MVP.md`.
-- [x] Tentukan identitas brand: **vintaagemeew** dengan tema estetika **Retro Y2K / Pastel Digicam**.
+- [x] Tentukan identitas brand: **vintagemeew** dengan tema estetika **Retro Y2K / Pastel Digicam**.
 - [x] Buat cetak biru teknis di `_build_plan/blueprints/` (`theme-config.css`, `schema-proposal.ts`, `shadcn-components.txt`, `Dockerfile`, `coolify.json`).
 - [x] Buat rencana milestone bertahap (`milestone-1-init.md`, `milestone-2-core.md`, `milestone-3-coolify.md`).
 - [x] Perbarui MVP dan PRD agar spesifik untuk e-commerce kamera digicam vintage: stok tanpa varian, kondisi terstruktur, IDR saja, galeri sample shots, zona ongkir tetap, auto-cancel order, tanpa promo bertingkat.
@@ -180,8 +180,8 @@ Dokumen ini diperbarui secara otomatis di akhir setiap sesi pengerjaan.
 - [x] Verifikasi browser subagent otomatis (`isolated_admin_login_demo`): Halaman `/admin/login` bersih, terisolasi 100%, dan bebas dari navbar admin.
 - [x] **Redesign Total Beranda & Navigasi Toko (Acuan Editorial GAZU - Gambar 1)**:
   - Mengubah estetika dari nuansa pastel/gimmick jadul menjadi **Editorial Minimalist High-Fashion** ala brand internasional (GAZU):
-    - **Header 3-Kolom**: Top announcement bar hitam (`GRATIS ONGKIR SE-INDONESIA • 100% UNIT LULUS TES FUNGSI & SIAP PAKAI`), navigasi brand di kiri (`CANON`, `SONY`, `NIKON`, `FUJIFILM`, `ALL CAMERAS`), tipografi logo bold tebal di tengah (**VINTAAGEMEEW**), dan aksi minimalis di kanan (`SEARCH`, `LOGIN`, `CART (N)`).
-    - **Hero Section GAZU**: Latar tipografi raksasa `VINTAAGEMEEW`, subjek kamera star pick terpusat di tengah dengan bayangan halus, teks editorial kiri (`CURATED DIGICAMS`, `MEMORIES THAT MOVE WITH YOU.`, tombol `SHOP NOW` hitam + `EXPLORE NEW IN`), dan badge editorial kanan (`NEW COLLECTION 2026`).
+    - **Header 3-Kolom**: Top announcement bar hitam (`GRATIS ONGKIR SE-INDONESIA • 100% UNIT LULUS TES FUNGSI & SIAP PAKAI`), navigasi brand di kiri (`CANON`, `SONY`, `NIKON`, `FUJIFILM`, `ALL CAMERAS`), tipografi logo bold tebal di tengah (**VINTAGEMEEW**), dan aksi minimalis di kanan (`SEARCH`, `LOGIN`, `CART (N)`).
+    - **Hero Section GAZU**: Latar tipografi raksasa `VINTAGEMEEW`, subjek kamera star pick terpusat di tengah dengan bayangan halus, teks editorial kiri (`CURATED DIGICAMS`, `MEMORIES THAT MOVE WITH YOU.`, tombol `SHOP NOW` hitam + `EXPLORE NEW IN`), dan badge editorial kanan (`NEW COLLECTION 2026`).
     - **Pita Kategori Gelap 3-Kolom**: Meniru langsung kartu kategori bawah GAZU dengan 3 kartu gelap side-by-side (`CANON`, `SONY`, `NIKON`) dengan foto thumbnail nyata, micro-copy, dan tautan bergaris bawah.
     - **Pembersihan Elemen Mengganggu**: Menghapus total stempel tanggal oranye `'04 10 27'`, timer berkedip `• REC 00:04:12`, bracket sudut bidik, dan ikon emoji acak. Foto produk kini 100% bersih dan elegan.
     - **Katalog & Card Produk**: Card produk kini bernuansa editorial bersih, label kondisi tajam (`9.0/10 EXCELLENT`, `10.0/10 LIKE NEW`), tipografi harga tebal, dan badge `SOLD OUT` presisi.

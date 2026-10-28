@@ -1,4 +1,4 @@
-# AUDIT.md - Log Audit & Pelacakan Bug Teknis vintaagemeew
+﻿# AUDIT.md - Log Audit & Pelacakan Bug Teknis vintagemeew
 
 Dokumen ini melacak temuan bug teknis, status perbaikan, dan verifikasi kelayakan kode.
 

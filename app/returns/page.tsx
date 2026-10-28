@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ShieldCheck, Video, Clock, AlertCircle, ArrowLeft } from "lucide-react";
 
-export const metadata: Metadata = { title: "Garansi & Retur | vintaagemeew" };
+export const metadata: Metadata = { title: "Garansi & Retur | vintagemeew" };
 
 export default function ReturnsPage() {
   return (
@@ -13,7 +13,7 @@ export default function ReturnsPage() {
           Kebijakan Garansi &amp; Retur
         </h1>
         <p className="mt-2 text-xs sm:text-sm text-muted-foreground leading-relaxed">
-          Setiap kamera di vintaagemeew telah melewati inspeksi fungsi sebelum dikirim. Berikut ketentuan klaim garansi fungsi jika barang yang diterima tidak sesuai catatan deskripsi.
+          Setiap kamera di vintagemeew telah melewati inspeksi fungsi sebelum dikirim. Berikut ketentuan klaim garansi fungsi jika barang yang diterima tidak sesuai catatan deskripsi.
         </p>
       </header>
 

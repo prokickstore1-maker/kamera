@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { db } from "@/db";
 import { settings, paymentMethods } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import { CheckoutForm } from "@/components/checkout-form";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Checkout | vintaagemeew", robots: { index: false } };
+export const metadata: Metadata = { title: "Checkout | vintagemeew", robots: { index: false } };
 
 function parseList(v: string | undefined): string[] {
   if (!v) return [];

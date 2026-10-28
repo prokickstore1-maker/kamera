@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { SlidersHorizontal, Search, X } from "lucide-react";
 import { listProducts, catalogFacets, type CatalogFilters } from "@/lib/catalog";
@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Katalog Digicam | vintaagemeew",
+  title: "Katalog Digicam | vintagemeew",
   description: "Kamera digital saku vintage & preloved terkurasi. Filter brand, kategori, kondisi fisik, fitur, dan rentang harga.",
 };
 

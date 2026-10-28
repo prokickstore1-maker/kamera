@@ -1,6 +1,6 @@
-# Blueprint & Spesifikasi Fitur MVP E-Commerce Fullstack (Next.js App Router)
+﻿# Blueprint & Spesifikasi Fitur MVP E-Commerce Fullstack (Next.js App Router)
 
-Dokumen ini adalah acuan standar (*master blueprint*) untuk membangun platform e-commerce siap pakai (*production-grade MVP*). Versi ini sudah diselaraskan dengan kebutuhan spesifik **vintaagemeew** (kurasi kamera digital vintage / digicam preloved) dan menjadi rujukan wajib bagi `_build_plan/prd.md`.
+Dokumen ini adalah acuan standar (*master blueprint*) untuk membangun platform e-commerce siap pakai (*production-grade MVP*). Versi ini sudah diselaraskan dengan kebutuhan spesifik **vintagemeew** (kurasi kamera digital vintage / digicam preloved) dan menjadi rujukan wajib bagi `_build_plan/prd.md`.
 
 ---
 

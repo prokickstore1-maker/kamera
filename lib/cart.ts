@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 /**
  * Cart client-side: external store native (tanpa dependency), persist localStorage.
@@ -17,7 +17,7 @@ export type CartItem = {
   qty: number;
 };
 
-const KEY = "vintaagemeew-cart";
+const KEY = "vintagemeew-cart";
 let cache: CartItem[] = load();
 const subs = new Set<() => void>();
 

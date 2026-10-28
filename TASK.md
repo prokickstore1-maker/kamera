@@ -1,4 +1,4 @@
-# TASK.md - Daftar Tugas Perbaikan Bug, Penyelarasan Ambiguitas & Milestone 3
+﻿# TASK.md - Daftar Tugas Perbaikan Bug, Penyelarasan Ambiguitas & Milestone 3
 
 **Terakhir Diperbarui:** 2026-10-28  
 **Referensi Audit:** `bug-audit/AUDIT.md`, `MVP.md`, `_build_plan/prd.md`, `HANDOFF.md`, `DAILY_TASKS.md`
@@ -119,7 +119,7 @@
 - [x] **Perbarui `db/seed.ts` agar sesuai dengan klaim fitur & lokasi toko**:
   - Tambahkan ke-8 merek populer dunia (*Olympus, Panasonic Lumix, Casio, Kodak, Ricoh, Samsung, Leica, Pentax*) ke dalam `db/seed.ts` agar tidak hilang saat re-seed.
   - Tambahkan data awal `testimonials` di `db/seed.ts` (sesuai log `[5/6] Seeding default banners, testimonials & payment methods...`).
-  - Ubah `accountHolder: "VINTAAGEMEEW JKT"` di `db/seed.ts:314, 324` menjadi `"VINTAAGEMEEW"` / `"VINTAAGEMEEW KEDIRI"`.
+  - Ubah `accountHolder: "VINTAGEMEEW JKT"` di `db/seed.ts:314, 324` menjadi `"VINTAGEMEEW"` / `"VINTAGEMEEW KEDIRI"`.
 - [x] **Putuskan & selaraskan aturan tag `"Brand New"` di `MVP.md`, `_build_plan/prd.md`, dan `db/seed.ts`**:
   - Hilangkan kontradiksi antara `MVP.md:33` (dibuang) vs `MVP.md:49` & `prd.md:122, 231` (dipertahankan sebagai tag `brand-new`).
 - [x] **Selaraskan dokumentasi arsitektur dengan implementasi aktual**:
