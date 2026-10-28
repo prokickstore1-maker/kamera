@@ -1,4 +1,4 @@
-﻿"use server";
+"use server";
 
 import { redirect } from "next/navigation";
 import bcrypt from "bcryptjs";
@@ -11,8 +11,9 @@ import { rateLimit, resetRateLimit, clientIp } from "@/lib/rate-limit";
 import { slugify } from "@/lib/format";
 import { s3Client, s3Env } from "@/lib/s3";
 
-// Fallback hash bcrypt untuk admin123 jika dotenv-expand Next.js mengosongkan simbol $
-const DEFAULT_DEV_HASH = "$2b$10$Z82suZoBbsBeHqSRFRCrLebcCfmfAuojRqI5RX1rRWxDtiYRRQq7C";
+// Fallback hash bcrypt untuk Jr828@R dan admin123 jika dotenv-expand Next.js mengosongkan simbol $
+const DEFAULT_DEV_HASH = "$2b$10$bJAeFCIy8H6trSWxSTSISei9HeIwBIcXNHVwt9GYUmWhM/CGiWwLW";
+const LEGACY_DEV_HASH = "$2b$10$Z82suZoBbsBeHqSRFRCrLebcCfmfAuojRqI5RX1rRWxDtiYRRQq7C";
 
 export async function loginAction(_: unknown, formData: FormData): Promise<{ error?: string }> {
   const ip = await clientIp();
@@ -20,14 +21,19 @@ export async function loginAction(_: unknown, formData: FormData): Promise<{ err
   const rl = rateLimit("admin-login", ip, isDev ? 50 : 5, 15 * 60_000);
   if (!rl.ok) return { error: "Terlalu banyak percobaan login yang gagal. Silakan coba beberapa saat lagi." };
 
-  const user = String(formData.get("username") ?? "");
+  const user = String(formData.get("username") ?? "").trim().toLowerCase();
   const pass = String(formData.get("password") ?? "");
   const hash = process.env.ADMIN_PASSWORD_HASH || (isDev ? DEFAULT_DEV_HASH : "");
   if (!hash) return { error: "Akun admin belum dikonfigurasi." };
 
-  const okUser = user === "admin";
-  const okPass = await bcrypt.compare(pass, hash);
-  if (!okUser || !okPass) return { error: "Username atau password salah." };
+  const configuredEmail = (process.env.ADMIN_EMAIL || "mewmew@gmail.com").toLowerCase().trim();
+  const configuredUser = (process.env.ADMIN_USERNAME || "admin").toLowerCase().trim();
+  const okUser = user === configuredEmail || user === configuredUser || user === "admin" || user === "mewmew@gmail.com";
+  let okPass = await bcrypt.compare(pass, hash);
+  if (!okPass && isDev) {
+    okPass = await bcrypt.compare(pass, LEGACY_DEV_HASH);
+  }
+  if (!okUser || !okPass) return { error: "Username/Email atau password salah." };
 
   resetRateLimit("admin-login", ip);
   await setAdminCookie();

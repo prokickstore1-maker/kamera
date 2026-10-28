@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useActionState, useState } from "react";
 import { loginAction } from "@/lib/admin-actions";
@@ -40,13 +40,13 @@ export function LoginForm() {
           className="space-y-4"
         >
           <div className="space-y-1.5">
-            <Label htmlFor="username">Username</Label>
+            <Label htmlFor="username">Email atau Username</Label>
             <Input
               id="username"
               name="username"
               autoComplete="username"
               required
-              placeholder="Username admin"
+              placeholder="mewmew@gmail.com atau admin"
               className="rounded-full h-10 px-4"
             />
           </div>
