@@ -16,8 +16,9 @@ COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED 1
 ENV NODE_ENV production
+ENV NODE_OPTIONS="--max-old-space-size=768"
 
-# Jalankan build Next.js (output standalone)
+# Jalankan build Next.js (output standalone dengan batas memori aman)
 RUN npm run build
 
 # 3. Runner
