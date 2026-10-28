@@ -166,9 +166,17 @@ export function ShopShell({
           <div className="flex items-center justify-center md:justify-start flex-1 md:flex-initial shrink-0">
             <Link
               href="/"
-              className="text-lg sm:text-xl lg:text-2xl font-black tracking-[0.14em] sm:tracking-[0.18em] text-foreground uppercase hover:opacity-85 transition-opacity whitespace-nowrap"
+              className="flex items-center gap-2 text-lg sm:text-xl lg:text-2xl font-black tracking-[0.14em] sm:tracking-[0.18em] text-foreground uppercase hover:opacity-85 transition-opacity whitespace-nowrap"
             >
-              VINTAGE<span className="text-primary">MEEW</span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo.jpg"
+                alt="vintagemeew logo"
+                className="h-7 w-7 sm:h-8 sm:w-8 rounded-full object-cover border border-border shrink-0 shadow-2xs"
+              />
+              <span>
+                VINTAGE<span className="text-primary">MEEW</span>
+              </span>
             </Link>
           </div>
 
@@ -272,9 +280,17 @@ export function ShopShell({
       <footer className="border-t border-border bg-card text-foreground">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16 grid gap-10 md:grid-cols-4 text-xs">
           <div className="space-y-3 md:col-span-1">
-            <p className="text-sm font-black tracking-[0.18em] uppercase text-foreground">
-              VINTAGE<span className="text-primary">MEEW</span>
-            </p>
+            <div className="flex items-center gap-2.5">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo.jpg"
+                alt="vintagemeew logo"
+                className="h-7 w-7 rounded-full object-cover border border-border shrink-0"
+              />
+              <p className="text-sm font-black tracking-[0.18em] uppercase text-foreground">
+                VINTAGE<span className="text-primary">MEEW</span>
+              </p>
+            </div>
             <p className="text-muted-foreground text-xs leading-relaxed">
               Kurasi kamera digital saku (digicam) era 2000-an preloved &amp; unit baru. Dites satu per satu, catatan kondisi transparan, dan siap dipakai memotret.
             </p>

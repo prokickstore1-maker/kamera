@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import * as React from "react";
 import Link from "next/link";
@@ -82,9 +82,12 @@ export function AdminDesktopSidebar() {
   return (
     <aside className="hidden md:flex fixed inset-y-0 left-0 z-30 w-64 flex-col border-r border-border bg-card">
       <div className="flex h-16 items-center gap-3 px-6 border-b border-border/80">
-        <div className="h-8 w-8 rounded-full bg-secondary flex items-center justify-center text-primary shrink-0 shadow-xs">
-          <Camera className="h-4 w-4" />
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo.jpg"
+          alt="vintagemeew logo"
+          className="h-8 w-8 rounded-full object-cover border border-border shrink-0 shadow-xs"
+        />
         <div className="min-w-0">
           <p className="font-extrabold text-sm text-foreground tracking-tight truncate">
             vintagemeew
@@ -159,9 +162,12 @@ export function AdminMobileHeader() {
           <SheetContent side="left" className="w-72 p-0 flex flex-col bg-card border-r border-border">
             <SheetHeader className="p-5 border-b border-border/80 text-left">
               <div className="flex items-center gap-3">
-                <div className="h-8 w-8 rounded-full bg-secondary flex items-center justify-center text-primary shrink-0">
-                  <Camera className="h-4 w-4" />
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/logo.jpg"
+                  alt="vintagemeew logo"
+                  className="h-8 w-8 rounded-full object-cover border border-border shrink-0 shadow-xs"
+                />
                 <div>
                   <SheetTitle className="text-sm font-extrabold text-foreground tracking-tight">
                     vintagemeew
