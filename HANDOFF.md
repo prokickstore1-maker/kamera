@@ -1,4 +1,4 @@
-﻿# HANDOFF.md - Status Estafet Sesi & Guardrails
+# HANDOFF.md - Status Estafet Sesi & Guardrails
 
 Dokumen ini memuat status serah terima antar sesi pengerjaan AI agent serta batasan (*guardrails*) bagian yang dilarang diutak-atik.
 
@@ -6,8 +6,17 @@ Dokumen ini memuat status serah terima antar sesi pengerjaan AI agent serta bata
 
 ## 🚦 Status Estafet Sesi
 
-- **Fase Saat Ini**: Milestone 3 — **SELURUH BUG AUDIT (`TASK.md`), UI/UX (`TASK_UI_UX.md`), DAN HARDENING MILESTONE 3 SELESAI**.
-- **Kondisi Repository**:
+- **Fase Saat Ini**: **PRODUKSI & LIVE (COOLIFY VPS DEPLOYMENT BERHASIL)**.
+- **Status Live**: Web store `https://vintagemeew.com` dan admin `https://vintagemeew.com/admin/login` aktif (`200 OK`).
+- **Kondisi Repository & Infrastruktur**:
+  - Proyek Next.js 16.4.3 (App Router + React 19.3 + Turbopack + Tailwind v4) aktif di root workspace.
+  - Skema Drizzle (`db/schema.ts`) dengan PostgreSQL di Coolify VPS (`103.117.56.39`).
+  - Akun Admin: Email `mewmew@gmail.com`, password `Jr828@R`.
+  - Integrasi Notifikasi Telegram (@Kameraku77_bot, Chat ID `8068039462`) aktif dan terverifikasi.
+  - S3 Object Storage IDCloudHost (`kamera`) aktif untuk galeri kamera dan bukti pembayaran.
+  - Swap Memory 4GB aktif di VPS Ubuntu IDCloudHost untuk stabilitas zero-crash.
+  - Build optimasi: `experimental.cpus: 1` dan `--max-old-space-size=768` tuntas dalam 112s.
+- **Kondisi Repository Sebelumnya**:
   - Proyek Next.js 16.4.3 (App Router + React 19.3 + Turbopack + Tailwind v4) aktif di root workspace.
   - Skema Drizzle (`db/schema.ts`) sudah sinkron dengan DB fisik via `drizzle-kit push`.
   - Database lokal: **Embedded PostgreSQL** aktif di port `5432` (`npm run db:start`) di `./.pgdata` (UTF-8 locale C).

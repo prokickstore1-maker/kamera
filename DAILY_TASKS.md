@@ -1,6 +1,21 @@
-﻿# DAILY_TASKS.md - Log Pengerjaan Harian vintagemeew
+# DAILY_TASKS.md - Log Pengerjaan Harian vintagemeew
 
 Dokumen ini diperbarui secara otomatis di akhir setiap sesi pengerjaan.
+
+---
+
+## 2026-10-29
+
+### 🎯 Target Sesi Ini:
+- [x] Konfigurasi kredensial admin resmi: `mewmew@gmail.com` dan password `Jr828@R` (`c714273`).
+- [x] Pastikan semua rute web Next.js decoupled dari DB saat build via `force-dynamic` (`8c2257d`).
+- [x] Integrasi Telegram Bot (@Kameraku77_bot) dan Chat ID `8068039462` dengan verifikasi kirim pesan berhasil (`e6bcbea`).
+- [x] Optimasi RAM Docker build: limit 1 worker CPU & 768MB RAM (`a3016b6`) sehingga build tuntas dalam 112s tanpa membebani server.
+- [x] Perbaikan `.dockerignore` untuk menyertakan berkas seed JSON kamera (`75600b4`).
+- [x] Sanitasi form login admin: hapus email pribadi dari placeholder (`bf7fca9`).
+- [x] Panduan pemulihan server & aktivasi SWAP memory 4GB di VPS Ubuntu IDCloudHost.
+- [ ] Verifikasi eksekusi migrasi & seed tabel database kamera via Coolify Terminal (`npm run db:push && npm run db:seed`).
+- [ ] Setup Scheduled Task Cron `*/15 * * * *` di Coolify untuk auto-cancel pesanan kadaluarsa.
 
 ---
 
