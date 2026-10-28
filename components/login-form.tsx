@@ -46,7 +46,7 @@ export function LoginForm() {
               name="username"
               autoComplete="username"
               required
-              placeholder="mewmew@gmail.com atau admin"
+              placeholder="Email atau username"
               className="rounded-full h-10 px-4"
             />
           </div>
