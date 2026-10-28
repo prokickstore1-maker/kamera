@@ -295,7 +295,7 @@ export async function uploadProof(orderId: string, file: File): Promise<{ ok: bo
 
 async function storeProof(orderId: string, body: Uint8Array, filename: string): Promise<string> {
   const { PutObjectCommand } = await import("@aws-sdk/client-s3");
-  const endpoint = process.env.S3_ENDPOINT;
+  const endpoint = s3Env("S3_ENDPOINT");
   if (!endpoint) throw new Error("S3_ENDPOINT kosong");
   const ext = filename.toLowerCase().endsWith(".png") ? "png" : filename.toLowerCase().endsWith(".webp") ? "webp" : "jpg";
   const key = `proofs/${orderId}-${Date.now()}.${ext}`;

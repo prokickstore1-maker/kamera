@@ -24,6 +24,11 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "is3.cloudhost.id",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
         hostname: "minio.girlyglimpse.com",
         pathname: "/**",
       },

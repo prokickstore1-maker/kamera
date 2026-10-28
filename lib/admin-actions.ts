@@ -9,7 +9,7 @@ import { and, eq, isNull, sql, ilike, or, count, inArray } from "drizzle-orm";
 import { setAdminCookie, clearAdminCookie, isAdmin } from "@/lib/admin-session";
 import { rateLimit, resetRateLimit, clientIp } from "@/lib/rate-limit";
 import { slugify } from "@/lib/format";
-import { s3Client, s3Env } from "@/lib/s3";
+import { s3Client, s3Env, s3PublicUrl } from "@/lib/s3";
 
 // Fallback hash bcrypt untuk Jr828@R dan admin123 jika dotenv-expand Next.js mengosongkan simbol $
 const DEFAULT_DEV_HASH = "$2b$10$bJAeFCIy8H6trSWxSTSISei9HeIwBIcXNHVwt9GYUmWhM/CGiWwLW";
@@ -415,8 +415,8 @@ export async function uploadProductImageAction(formData: FormData): Promise<{ ok
     const ext = file.name.toLowerCase().endsWith(".png") ? "png" : file.name.toLowerCase().endsWith(".webp") ? "webp" : "jpg";
     const filename = `product-${Date.now()}-${Math.random().toString(36).slice(2, 7)}.${ext}`;
 
-    const endpoint = process.env.S3_ENDPOINT;
-    const bucket = s3Env("S3_BUCKET_PUBLIC") || "vintagemeew-public";
+    const endpoint = s3Env("S3_ENDPOINT");
+    const bucket = s3Env("S3_BUCKET_PUBLIC") || "kamera";
 
     if (endpoint && s3Env("S3_ACCESS_KEY_ID")) {
       try {
@@ -429,13 +429,11 @@ export async function uploadProductImageAction(formData: FormData): Promise<{ ok
             Key: `products/${filename}`,
             Body: buffer,
             ContentType: ext === "png" ? "image/png" : ext === "webp" ? "image/webp" : "image/jpeg",
+            ACL: "public-read",
           })
         );
 
-        const publicUrl = process.env.NEXT_PUBLIC_S3_PUBLIC_URL 
-          ? `${process.env.NEXT_PUBLIC_S3_PUBLIC_URL.replace(/\/$/, "")}/products/${filename}`
-          : `${endpoint.replace(/\/$/, "")}/${bucket}/products/${filename}`;
-
+        const publicUrl = s3PublicUrl(bucket, `products/${filename}`);
         return { ok: true, url: publicUrl };
       } catch (s3Err) {
         console.warn("S3 upload gagal, simpan ke lokal public/uploads/:", s3Err);
@@ -618,8 +616,8 @@ export async function uploadTestimonialImageAction(
         : "jpg";
     const filename = `testi-${Date.now()}-${Math.random().toString(36).slice(2, 7)}.${ext}`;
 
-    const endpoint = process.env.S3_ENDPOINT;
-    const bucket = s3Env("S3_BUCKET_PUBLIC") || "vintagemeew-public";
+    const endpoint = s3Env("S3_ENDPOINT");
+    const bucket = s3Env("S3_BUCKET_PUBLIC") || "kamera";
 
     if (endpoint && s3Env("S3_ACCESS_KEY_ID")) {
       try {
@@ -632,13 +630,11 @@ export async function uploadTestimonialImageAction(
             Key: `testimonials/${filename}`,
             Body: buffer,
             ContentType: ext === "png" ? "image/png" : ext === "webp" ? "image/webp" : "image/jpeg",
+            ACL: "public-read",
           })
         );
 
-        const publicUrl = process.env.NEXT_PUBLIC_S3_PUBLIC_URL
-          ? `${process.env.NEXT_PUBLIC_S3_PUBLIC_URL.replace(/\/$/, "")}/testimonials/${filename}`
-          : `${endpoint.replace(/\/$/, "")}/${bucket}/testimonials/${filename}`;
-
+        const publicUrl = s3PublicUrl(bucket, `testimonials/${filename}`);
         return { ok: true, url: publicUrl };
       } catch (s3Err) {
         console.warn("S3 upload testimoni gagal, simpan ke lokal public/uploads/:", s3Err);
@@ -902,8 +898,8 @@ export async function uploadBannerImageAction(
         : "jpg";
     const filename = `banner-${Date.now()}-${Math.random().toString(36).slice(2, 7)}.${ext}`;
 
-    const endpoint = process.env.S3_ENDPOINT;
-    const bucket = s3Env("S3_BUCKET_PUBLIC") || "vintagemeew-public";
+    const endpoint = s3Env("S3_ENDPOINT");
+    const bucket = s3Env("S3_BUCKET_PUBLIC") || "kamera";
 
     if (endpoint && s3Env("S3_ACCESS_KEY_ID")) {
       try {
@@ -916,13 +912,11 @@ export async function uploadBannerImageAction(
             Key: `banners/${filename}`,
             Body: buffer,
             ContentType: ext === "png" ? "image/png" : ext === "webp" ? "image/webp" : "image/jpeg",
+            ACL: "public-read",
           })
         );
 
-        const publicUrl = process.env.NEXT_PUBLIC_S3_PUBLIC_URL
-          ? `${process.env.NEXT_PUBLIC_S3_PUBLIC_URL.replace(/\/$/, "")}/banners/${filename}`
-          : `${endpoint.replace(/\/$/, "")}/${bucket}/banners/${filename}`;
-
+        const publicUrl = s3PublicUrl(bucket, `banners/${filename}`);
         return { ok: true, url: publicUrl };
       } catch (s3Err) {
         console.warn("S3 upload banner gagal, simpan ke lokal public/uploads/:", s3Err);
