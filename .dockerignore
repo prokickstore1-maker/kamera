@@ -9,7 +9,7 @@ node_modules
 _build_plan
 bug-audit
 docs
-data
+data/images
 DAILY_TASKS.md
 HANDOFF.md
 TASK.md
