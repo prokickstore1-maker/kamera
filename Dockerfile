@@ -36,6 +36,13 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
+# Salin berkas skema, data, dan dependencies agar db:push dan db:seed bisa dijalankan di terminal container
+COPY --from=builder /app/db ./db
+COPY --from=builder /app/data ./data
+COPY --from=builder /app/drizzle.config.ts ./drizzle.config.ts
+COPY --from=builder /app/package.json ./package.json
+COPY --from=deps /app/node_modules ./node_modules
+
 USER nextjs
 
 EXPOSE 3000
