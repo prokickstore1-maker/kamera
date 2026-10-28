@@ -1,0 +1,143 @@
+/**
+ * vintaagemeew - Design Tokens & Theme Configuration
+ * Style Archetype: Retro Y2K / Aesthetic Pastel Digicam
+ * Mode: Light Mode Default (with Dark Mode support)
+ */
+
+@layer base {
+  :root {
+    /* Base Color Tokens - Warm Pastel Cream & Y2K Soft Pink */
+    --background: 350 40% 98%;           /* #fffbf9 Warm Cream */
+    --foreground: 320 20% 15%;           /* #2e1d27 Deep Charcoal Plum */
+
+    --card: 0 0% 100%;                   /* Pure White */
+    --card-foreground: 320 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 320 20% 15%;
+
+    /* Brand Primary - Y2K Vibrant Pastel Rose */
+    --primary: 330 81% 60%;              /* #ec4899 Rose Pink */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Delicate Blush */
+    --secondary: 330 65% 95%;            /* #fdf2f8 Soft Blush */
+    --secondary-foreground: 330 70% 35%; /* Deep Rose Accent */
+
+    /* Muted Elements */
+    --muted: 330 25% 94%;
+    --muted-foreground: 320 10% 45%;     /* Dusty Plum */
+
+    /* Accent & Highlights */
+    --accent: 335 85% 90%;               /* #fbcfe8 Pastel Petal */
+    --accent-foreground: 330 80% 30%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 330 50% 92%;               /* #fae1e8 Delicate Border */
+    --input: 330 50% 92%;
+    --ring: 330 81% 60%;
+
+    /* Radii */
+    --radius: 0.875rem;
+
+    /* Custom Theme Tokens */
+    --y2k-pink-glaze: rgba(236, 72, 153, 0.08);
+    --y2k-border-subtle: rgba(244, 114, 182, 0.35);
+    --y2k-shadow-soft: 0 8px 30px -4px rgba(236, 72, 153, 0.12);
+  }
+
+  .dark {
+    --background: 320 25% 8%;            /* Deep Night Plum */
+    --foreground: 330 30% 96%;
+
+    --card: 320 20% 11%;
+    --card-foreground: 330 30% 96%;
+
+    --popover: 320 20% 11%;
+    --popover-foreground: 330 30% 96%;
+
+    --primary: 330 81% 65%;
+    --primary-foreground: 320 25% 8%;
+
+    --secondary: 320 20% 18%;
+    --secondary-foreground: 330 70% 85%;
+
+    --muted: 320 15% 18%;
+    --muted-foreground: 330 20% 65%;
+
+    --accent: 330 50% 25%;
+    --accent-foreground: 330 80% 90%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 320 20% 22%;
+    --input: 320 20% 22%;
+    --ring: 330 81% 65%;
+
+    --y2k-pink-glaze: rgba(236, 72, 153, 0.15);
+    --y2k-border-subtle: rgba(244, 114, 182, 0.25);
+    --y2k-shadow-soft: 0 8px 30px -4px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Custom Y2K Digicam Utility Classes */
+@layer utilities {
+  .y2k-card {
+    background-color: hsl(var(--card));
+    border: 1px solid var(--y2k-border-subtle);
+    border-radius: var(--radius);
+    box-shadow: var(--y2k-shadow-soft);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .y2k-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px -4px rgba(236, 72, 153, 0.2);
+    border-color: hsl(var(--primary) / 0.5);
+  }
+
+  .y2k-pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 9999px;
+    background-color: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+    border: 1px solid hsl(var(--primary) / 0.2);
+  }
+
+  .y2k-glow {
+    filter: drop-shadow(0 0 12px rgba(236, 72, 153, 0.35));
+  }
+
+  .camera-viewfinder-frame {
+    position: relative;
+    border-radius: calc(var(--radius) - 2px);
+    overflow: hidden;
+  }
+
+  .camera-viewfinder-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0.5rem;
+    border: 1px dashed rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+    border-radius: calc(var(--radius) - 6px);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .camera-viewfinder-frame:hover::after {
+    opacity: 1;
+  }
+}

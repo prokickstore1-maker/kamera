@@ -1,0 +1,45 @@
+{
+  "source": "https://girlyglimpse.com",
+  "scraped_at": "1793088072.611793",
+  "total_products": 32,
+  "total_images": 94,
+  "total_categories": 11,
+  "total_brands": 4,
+  "total_tags": 15,
+  "total_shipping_rates": 82,
+  "brands_list": [
+    "Canon",
+    "Fujifilm",
+    "Nikon",
+    "Sony"
+  ],
+  "categories_list": [
+    "Beginner Friendly",
+    "Canon G7X",
+    "Canon G7X Dupe",
+    "Celebrity's Pick",
+    "Compact",
+    "Digital Camera",
+    "Instax",
+    "Luxury",
+    "Mirrorless",
+    "Pink Collection",
+    "Point & Shoot"
+  ],
+  "conditions_found": [
+    "Wifi, Brand New",
+    "Good, Used",
+    "Wifi, Like New",
+    "Very good",
+    "Good",
+    "Like New"
+  ],
+  "price_range_idr": {
+    "min": 2300000,
+    "max": 20000000
+  },
+  "price_range_usd": {
+    "min": 145,
+    "max": 1212
+  }
+}

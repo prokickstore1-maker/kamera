@@ -1,0 +1,23 @@
+# Shadcn UI Components to Install for vintaagemeew
+# Run: npx shadcn@latest add <component-name>
+
+button
+badge
+card
+dialog
+drawer
+dropdown-menu
+form
+input
+label
+select
+separator
+sheet
+skeleton
+table
+tabs
+textarea
+sonner
+tooltip
+carousel
+aspect-ratio

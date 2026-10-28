@@ -1,0 +1,30 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# build output
+.next/
+out/
+build/
+dist/
+
+# environment
+.env
+.env*.local
+.env.production
+
+# dataset with personal contact data (PII) — never commit
+data/locations.json
+data/products.csv
+data/shipping_rates.json
+
+# misc
+.superpowers/
+.pgdata/
+.DS_Store
+*.log
+npm-debug.log*
+.vercel
+*.tsbuildinfo
+next-env.d.ts

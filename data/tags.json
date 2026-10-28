@@ -1,0 +1,137 @@
+[
+  {
+    "id": "c64921a0-019c-43a3-aedc-2e46cc65fad4",
+    "created_at": "2026-07-12T20:46:15.924532+07:00",
+    "updated_at": "2026-07-14T20:00:30.323496+07:00",
+    "name": "Brand New",
+    "slug": "brand-new",
+    "kind": "condition",
+    "color": "#ec4899"
+  },
+  {
+    "id": "c37ac78e-cc24-47b0-a0d7-f1835b1c692e",
+    "created_at": "2026-07-15T12:25:36.271727+07:00",
+    "updated_at": "2026-07-15T12:25:36.271727+07:00",
+    "name": "Good",
+    "slug": "good",
+    "kind": "condition",
+    "color": "#ec4899"
+  },
+  {
+    "id": "25c902d6-9a97-418d-8e40-305f521fc14e",
+    "created_at": "2026-07-12T20:46:15.925956+07:00",
+    "updated_at": "2026-07-14T20:00:32.784631+07:00",
+    "name": "Like New",
+    "slug": "like-new",
+    "kind": "condition",
+    "color": "#ec4899"
+  },
+  {
+    "id": "2140f79a-4073-414f-ac79-ce1b9096c914",
+    "created_at": "2026-07-15T12:26:02.022137+07:00",
+    "updated_at": "2026-07-15T12:26:02.022137+07:00",
+    "name": "Used",
+    "slug": "used",
+    "kind": "condition",
+    "color": "#ec4899"
+  },
+  {
+    "id": "256910e2-dba1-467e-9209-4ef36a22ae96",
+    "created_at": "2026-07-15T12:23:48.604903+07:00",
+    "updated_at": "2026-07-15T12:23:48.604903+07:00",
+    "name": "Very good",
+    "slug": "very-good",
+    "kind": "condition",
+    "color": "#ec4899"
+  },
+  {
+    "id": "248b662f-d551-4b9a-a884-c0a57a5f4b97",
+    "created_at": "2026-07-14T20:00:25.399719+07:00",
+    "updated_at": "2026-07-14T20:00:25.399719+07:00",
+    "name": "Wifi",
+    "slug": "wifi",
+    "kind": "condition",
+    "color": "#ec4899"
+  },
+  {
+    "id": "d5d80454-3336-4bfa-b209-c9df1f3c653f",
+    "created_at": "2026-07-14T20:05:45.0955+07:00",
+    "updated_at": "2026-07-14T20:05:45.0955+07:00",
+    "name": "Beginner Friendly",
+    "slug": "beginner-friendly",
+    "kind": "promo",
+    "color": "#ec4899"
+  },
+  {
+    "id": "f3ef5e07-f50d-4c2e-b0ec-541db4b5cfc8",
+    "created_at": "2026-07-12T20:46:15.919746+07:00",
+    "updated_at": "2026-07-14T20:05:52.326248+07:00",
+    "name": "Best Seller",
+    "slug": "best-seller",
+    "kind": "promo",
+    "color": "#ec4899"
+  },
+  {
+    "id": "ab3b9dd5-0528-4512-a2f8-279dc254fda1",
+    "created_at": "2026-07-12T20:46:15.922968+07:00",
+    "updated_at": "2026-07-14T20:05:55.41556+07:00",
+    "name": "Fan Fave",
+    "slug": "fan-fave",
+    "kind": "promo",
+    "color": "#ec4899"
+  },
+  {
+    "id": "7476ad47-9ef6-4ed7-a2a7-24d69ad05b39",
+    "created_at": "2026-07-14T19:30:21.893763+07:00",
+    "updated_at": "2026-07-14T19:30:21.893763+07:00",
+    "name": "Hailey Bieber's",
+    "slug": "hailey-biebers",
+    "kind": "promo",
+    "color": "#ec4899"
+  },
+  {
+    "id": "f3dc7e7f-b424-4c52-9ddd-5571741a5892",
+    "created_at": "2026-07-12T20:46:15.921478+07:00",
+    "updated_at": "2026-07-14T20:05:59.045386+07:00",
+    "name": "Hot",
+    "slug": "hot",
+    "kind": "promo",
+    "color": "#ec4899"
+  },
+  {
+    "id": "88be03dc-593e-4f3d-b90d-fdcc489326c1",
+    "created_at": "2026-07-14T20:00:45.889117+07:00",
+    "updated_at": "2026-07-14T20:00:45.889117+07:00",
+    "name": "Kendall Jenner's",
+    "slug": "kendall-jenners",
+    "kind": "promo",
+    "color": "#ec4899"
+  },
+  {
+    "id": "2ae4bfcc-3692-4b12-890c-26b89dcabc59",
+    "created_at": "2026-07-15T12:23:25.316206+07:00",
+    "updated_at": "2026-07-15T12:23:25.316206+07:00",
+    "name": "Madison Beer’s",
+    "slug": "madison-beers",
+    "kind": "promo",
+    "color": "#ec4899"
+  },
+  {
+    "id": "3bb88292-db0d-48a9-ba33-c766347ab535",
+    "created_at": "2026-07-14T19:29:14.395885+07:00",
+    "updated_at": "2026-07-14T19:29:14.395885+07:00",
+    "name": "Pink",
+    "slug": "pink",
+    "kind": "promo",
+    "color": "#ec4899"
+  },
+  {
+    "id": "2807f5fc-442f-4a63-8970-59824e2b4ba0",
+    "created_at": "2026-07-15T12:34:28.994627+07:00",
+    "updated_at": "2026-07-15T12:34:28.994627+07:00",
+    "name": "Thai it girls' fav",
+    "slug": "thai-it-girls-fav",
+    "kind": "promo",
+    "color": "#ec4899"
+  }
+]

@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fffbf9;
+  --foreground: #2e1d27;
+
+  --card: #ffffff;
+  --card-foreground: #2e1d27;
+
+  --popover: #ffffff;
+  --popover-foreground: #2e1d27;
+
+  --primary: #ec4899;
+  --primary-foreground: #ffffff;
+
+  --secondary: #fdf2f8;
+  --secondary-foreground: #9d174d;
+
+  --muted: #fdf4f5;
+  --muted-foreground: #7d6b76;
+
+  --accent: #fbcfe8;
+  --accent-foreground: #831843;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  --border: #fae1e8;
+  --input: #fae1e8;
+  --ring: #ec4899;
+
+  --radius: 0.75rem;
+
+  --editorial-shadow-subtle: 0 2px 10px -2px rgba(236, 72, 153, 0.07), 0 1px 3px -1px rgba(236, 72, 153, 0.04);
+  --editorial-shadow-hover: 0 12px 28px -6px rgba(236, 72, 153, 0.15), 0 6px 12px -4px rgba(236, 72, 153, 0.07);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-serif);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+}
+
+.y2k-card,
+.editorial-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--editorial-shadow-subtle);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.y2k-card:hover,
+.editorial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--editorial-shadow-hover);
+  border-color: color-mix(in srgb, var(--primary) 55%, var(--border));
+}
+
+.y2k-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 9999px;
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  border: 1px solid color-mix(in srgb, var(--primary) 22%, var(--border));
+}
+
+.camera-viewfinder-frame,
+.viewfinder-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.camera-viewfinder-frame::after,
+.viewfinder-box::after {
+  content: "";
+  position: absolute;
+  inset: 0.6rem;
+  border: 1px dashed rgba(255, 255, 255, 0.72);
+  border-radius: calc(var(--radius) - 2px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.camera-viewfinder-frame:hover::after,
+.viewfinder-box:hover::after,
+.group:hover .camera-viewfinder-frame::after {
+  opacity: 1;
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-flex;
+  animation: marquee-scroll 32s linear infinite;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.retro-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border-radius: 9999px;
+  background-color: var(--secondary);
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  transition: all 0.15s ease;
+}
+
+.retro-chip:hover {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: #ffffff;
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "id": "34e25974-4459-4a9f-8c28-f08b74f2a7a5",
+    "created_at": "2026-07-14T23:45:16.755714+07:00",
+    "updated_at": "2026-07-14T23:45:16.755714+07:00",
+    "name": "Beginner Friendly",
+    "slug": "beginner-friendly",
+    "parent_id": "1916a25f-85ff-468f-b270-507457c602ab"
+  },
+  {
+    "id": "1562ae74-6222-4d80-8922-88ba1568e000",
+    "created_at": "2026-07-14T19:55:33.045242+07:00",
+    "updated_at": "2026-07-14T19:55:33.045242+07:00",
+    "name": "Canon G7X",
+    "slug": "canon-g7x"
+  },
+  {
+    "id": "ba2354e9-5bd4-4ca6-88ac-95517f317953",
+    "created_at": "2026-07-15T17:01:44.994591+07:00",
+    "updated_at": "2026-07-15T17:01:44.994591+07:00",
+    "name": "Canon G7X Dupe",
+    "slug": "canon-g7x-dupe",
+    "parent_id": "1916a25f-85ff-468f-b270-507457c602ab"
+  },
+  {
+    "id": "c71802e4-37dc-42c7-ae80-f8e5b15c1145",
+    "created_at": "2026-07-14T20:02:28.077263+07:00",
+    "updated_at": "2026-07-14T20:02:28.077263+07:00",
+    "name": "Celebrity's Pick",
+    "slug": "celebritys-pick",
+    "parent_id": "1916a25f-85ff-468f-b270-507457c602ab"
+  },
+  {
+    "id": "0b5ef323-cac1-4d67-9278-eae39e0f4467",
+    "created_at": "2026-08-12T23:09:02.440438+07:00",
+    "updated_at": "2026-08-12T23:09:02.440438+07:00",
+    "name": "Compact",
+    "slug": "compact"
+  },
+  {
+    "id": "1916a25f-85ff-468f-b270-507457c602ab",
+    "created_at": "2026-07-14T19:26:43.305984+07:00",
+    "updated_at": "2026-07-14T19:26:43.305984+07:00",
+    "name": "Digital Camera",
+    "slug": "digital-camera"
+  },
+  {
+    "id": "72c43993-6638-4b7c-a9bf-e9d33513d631",
+    "created_at": "2026-08-12T23:09:02.450264+07:00",
+    "updated_at": "2026-08-12T23:09:02.450264+07:00",
+    "name": "Instax",
+    "slug": "instax"
+  },
+  {
+    "id": "ca5e5310-ad3d-494b-9c44-050a386bcd87",
+    "created_at": "2026-08-12T23:09:02.454137+07:00",
+    "updated_at": "2026-08-12T23:09:02.454137+07:00",
+    "name": "Luxury",
+    "slug": "luxury"
+  },
+  {
+    "id": "5846b2b1-ab99-429c-b3a0-b199cbc9786f",
+    "created_at": "2026-08-12T23:09:02.446561+07:00",
+    "updated_at": "2026-08-12T23:09:02.446561+07:00",
+    "name": "Mirrorless",
+    "slug": "mirrorless"
+  },
+  {
+    "id": "dcfb3d38-c8fe-4824-8f4e-d7d5b3c32bbd",
+    "created_at": "2026-07-14T19:46:35.402668+07:00",
+    "updated_at": "2026-07-14T19:46:35.402668+07:00",
+    "name": "Pink Collection",
+    "slug": "pink-collection",
+    "parent_id": "1916a25f-85ff-468f-b270-507457c602ab"
+  },
+  {
+    "id": "b43c99e9-dd47-49a1-b668-34c741102f81",
+    "created_at": "2026-08-12T23:09:02.443467+07:00",
+    "updated_at": "2026-08-12T23:09:02.443467+07:00",
+    "name": "Point & Shoot",
+    "slug": "point-shoot"
+  }
+]
