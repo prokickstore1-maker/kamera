@@ -18,6 +18,7 @@ import {
   uploadProductImageAction,
   type ProductInputData,
 } from "@/lib/admin-actions";
+import { rupiah } from "@/lib/format";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -80,6 +81,17 @@ const COMMON_FEATURES = [
   "Warm Retro Tone",
 ];
 
+function parsePriceToNumber(val: string): number {
+  const digits = val.replace(/[^\d]/g, "");
+  if (!digits) return 0;
+  const num = Number(digits);
+  // Jika admin mengetik dalam ribuan (misal: 250 untuk 250.000 atau 350 untuk 350.000)
+  if (num > 0 && num < 1000) {
+    return num * 1000;
+  }
+  return num;
+}
+
 export function ProductForm({ brands, categories, initialProduct }: ProductFormProps) {
   const router = useRouter();
   const isEdit = !!initialProduct;
@@ -105,7 +117,14 @@ export function ProductForm({ brands, categories, initialProduct }: ProductFormP
   const [isNewCategory, setIsNewCategory] = React.useState(false);
   const [newCategoryName, setNewCategoryName] = React.useState("");
 
-  const [priceIdr, setPriceIdr] = React.useState<number>(initialProduct?.priceIdr ?? 2500000);
+  const [priceInput, setPriceInput] = React.useState<string>(
+    initialProduct?.priceIdr ? initialProduct.priceIdr.toLocaleString("id-ID") : ""
+  );
+  const parsedPrice = React.useMemo(() => parsePriceToNumber(priceInput), [priceInput]);
+  const rawDigits = React.useMemo(() => priceInput.replace(/[^\d]/g, ""), [priceInput]);
+  const rawNumeric = React.useMemo(() => (rawDigits ? Number(rawDigits) : 0), [rawDigits]);
+  const isAutoConverted = rawNumeric > 0 && rawNumeric < 1000;
+
   const [stock, setStock] = React.useState<number>(initialProduct?.stock ?? 1);
   const [weightGrams, setWeightGrams] = React.useState<number>(
     initialProduct?.weightGrams ?? 350
@@ -260,6 +279,10 @@ export function ProductForm({ brands, categories, initialProduct }: ProductFormP
       toast.error("Nama kamera wajib diisi.");
       return;
     }
+    if (parsedPrice < 10_000) {
+      toast.error("Harga kamera wajib diisi (minimal Rp 10.000).");
+      return;
+    }
     if (images.length === 0) {
       toast.error("Minimal sertakan 1 foto kamera.");
       return;
@@ -280,7 +303,7 @@ export function ProductForm({ brands, categories, initialProduct }: ProductFormP
       newBrandName: isNewBrand ? newBrandName.trim() : null,
       categoryId: isNewCategory ? null : (categoryId || null),
       newCategoryName: isNewCategory ? newCategoryName.trim() : null,
-      priceIdr: Number(priceIdr),
+      priceIdr: parsedPrice,
       stock: Number(stock),
       conditionGrade: conditionGrade ? parseFloat(conditionGrade) : null,
       defects: defects.trim() || null,
@@ -473,16 +496,42 @@ export function ProductForm({ brands, categories, initialProduct }: ProductFormP
                   <Label htmlFor="price" className="text-xs font-semibold">
                     Harga Jual (IDR) <span className="text-destructive">*</span>
                   </Label>
-                  <Input
-                    id="price"
-                    type="number"
-                    min="100000"
-                    step="50000"
-                    value={priceIdr}
-                    onChange={(e) => setPriceIdr(Number(e.target.value))}
-                    required
-                    className="h-10 text-xs font-mono font-bold"
-                  />
+                  <div className="relative">
+                    <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-xs font-bold text-muted-foreground">
+                      Rp
+                    </span>
+                    <Input
+                      id="price"
+                      type="text"
+                      inputMode="numeric"
+                      value={priceInput}
+                      onChange={(e) => {
+                        const clean = e.target.value.replace(/[^\d]/g, "");
+                        if (!clean) {
+                          setPriceInput("");
+                          return;
+                        }
+                        setPriceInput(Number(clean).toLocaleString("id-ID"));
+                      }}
+                      placeholder="Contoh: 2.500.000 atau 250"
+                      required
+                      className="h-10 pl-9 text-xs font-mono font-bold"
+                    />
+                  </div>
+                  {priceInput ? (
+                    <div className="flex flex-wrap items-center gap-1.5 text-[11px] text-muted-foreground pt-0.5">
+                      <span className="font-bold text-primary">{rupiah(parsedPrice)}</span>
+                      {isAutoConverted && (
+                        <span className="inline-flex items-center rounded-sm bg-amber-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-amber-600 dark:text-amber-400">
+                          Auto konversi {rawNumeric} ribu
+                        </span>
+                      )}
+                    </div>
+                  ) : (
+                    <p className="text-[10px] text-muted-foreground">
+                      Ketik angka penuh atau singkatan (cth: 250 = 250.000).
+                    </p>
+                  )}
                 </div>
 
                 <div className="space-y-1.5">

@@ -200,8 +200,14 @@ export async function createProductAction(data: ProductInputData): Promise<{ ok:
   if (!name || name.length < 3) {
     return { ok: false, error: "Nama kamera minimal 3 karakter." };
   }
-  if (!data.priceIdr || data.priceIdr < 100_000) {
-    return { ok: false, error: "Harga kamera tidak valid (minimal Rp 100.000)." };
+
+  // Normalisasi harga: jika diisi ribuan (misal 250 untuk 250.000 atau 350 untuk 350.000)
+  let priceIdr = Number(data.priceIdr) || 0;
+  if (priceIdr > 0 && priceIdr < 1000) {
+    priceIdr = priceIdr * 1000;
+  }
+  if (!priceIdr || priceIdr < 10_000) {
+    return { ok: false, error: "Harga kamera tidak valid (minimal Rp 10.000)." };
   }
 
   // produk aktif wajib: skor kondisi (1–10) + minimal 1 foto (MVP.md §kondisi)
@@ -283,7 +289,7 @@ export async function createProductAction(data: ProductInputData): Promise<{ ok:
         slug: finalSlug,
         brandId: finalBrandId,
         categoryId: finalCategoryId,
-        priceIdr: Math.round(data.priceIdr),
+        priceIdr: Math.round(priceIdr),
         stock: Number.isInteger(data.stock) ? Math.max(0, data.stock) : 1,
         conditionGrade: data.conditionGrade ? String(data.conditionGrade) : null,
         defects: data.defects?.trim() || null,
@@ -741,8 +747,14 @@ export async function updateProductAction(
   if (!name || name.length < 3) {
     return { ok: false, error: "Nama kamera minimal 3 karakter." };
   }
-  if (!data.priceIdr || data.priceIdr < 100_000) {
-    return { ok: false, error: "Harga kamera tidak valid (minimal Rp 100.000)." };
+
+  // Normalisasi harga: jika diisi ribuan (misal 250 untuk 250.000 atau 350 untuk 350.000)
+  let priceIdr = Number(data.priceIdr) || 0;
+  if (priceIdr > 0 && priceIdr < 1000) {
+    priceIdr = priceIdr * 1000;
+  }
+  if (!priceIdr || priceIdr < 10_000) {
+    return { ok: false, error: "Harga kamera tidak valid (minimal Rp 10.000)." };
   }
 
   const wantsActive = data.active !== false;
@@ -818,7 +830,7 @@ export async function updateProductAction(
         name,
         brandId: finalBrandId,
         categoryId: finalCategoryId,
-        priceIdr: Math.round(data.priceIdr),
+        priceIdr: Math.round(priceIdr),
         stock: Number.isInteger(data.stock) ? Math.max(0, data.stock) : 1,
         conditionGrade: data.conditionGrade ? String(data.conditionGrade) : null,
         defects: data.defects?.trim() || null,

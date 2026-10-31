@@ -4,6 +4,18 @@ Dokumen ini diperbarui secara otomatis di akhir setiap sesi pengerjaan.
 
 ---
 
+## 2026-10-31
+
+### 🎯 Target Sesi Ini:
+- [x] Perbaikan Bug Logika Input & Upload Harga Produk ([components/product-form.tsx](file:///d:/project%20web/kamera%20pung%20lallang/components/product-form.tsx) & [lib/admin-actions.ts](file:///d:/project%20web/kamera%20pung%20lallang/lib/admin-actions.ts)):
+  - Menghilangkan bug `type="number"` browser yang memotong input titik ribuan (`250.000` / `350.000` menjadi `250` dan `350`).
+  - Mengubah input menjadi formatted Rupiah input dengan titik ribuan otomatis dan live preview Rupiah.
+  - Implementasi auto-conversion pintar untuk input nominal ribuan (ketik `250` otomatis diproses sebagai Rp 250.000, `350` sebagai Rp 350.000).
+  - Normalisasi backend di `createProductAction` dan `updateProductAction` serta menurunkan batas harga minimum dari 100.000 ke 10.000 agar fleksibel untuk aksesoris.
+  - Verifikasi: `npx tsc --noEmit` EXIT=0, `npm run test` 33/33 PASS.
+
+---
+
 ## 2026-10-29
 
 ### 🎯 Target Sesi Ini:

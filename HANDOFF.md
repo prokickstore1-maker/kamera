@@ -13,7 +13,9 @@ Dokumen ini memuat status serah terima antar sesi pengerjaan AI agent serta bata
   - Skema Drizzle (`db/schema.ts`) dengan PostgreSQL di Coolify VPS (`103.117.56.39`).
   - Akun Admin: Email `mewmew@gmail.com`, password `Jr828@R`.
   - Integrasi Notifikasi Telegram (@Kameraku77_bot, Chat ID `8068039462`) aktif dan terverifikasi.
-  - S3 Object Storage IDCloudHost (`kamera`) aktif untuk galeri kamera dan bukti pembayaran.
+  - S3 Object Storage IDCloudHost (`kamera`) aktif untuk galeri kamera, banner, testimoni, QRIS, dan bukti bayar.
+  - Form Rekening Bank & QRIS di `/admin/settings` aktif.
+  - **Perbaikan Input & Logika Harga Produk Selesai**: Form kamera (`components/product-form.tsx`) dan backend server action (`lib/admin-actions.ts`) kini menggunakan format Rupiah cerdas (auto-separator ribuan, auto-conversion angka singkat ribuan `250` -> `250.000` / `350` -> `350.000`, live preview Rp, dan batas minimum diturunkan ke Rp 10.000).
   - Swap Memory 4GB aktif di VPS Ubuntu IDCloudHost untuk stabilitas zero-crash.
   - Build optimasi: `experimental.cpus: 1` dan `--max-old-space-size=768` tuntas dalam 112s.
 - **Kondisi Repository Sebelumnya**:
